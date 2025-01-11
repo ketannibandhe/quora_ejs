@@ -1,1 +1,1 @@
-# quora_ejs
+# quora platform created using ejs templating express
