@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/REST_api/public/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Post</h1>
+
+        <form action="/posts/<%= post.id %>?_method=PATCH" method="POST">
+            <p>Post id: <%=post.id%></p>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="<%= post.username %>" readonly />
+            </div>
+
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" rows="4" required><%= post.content %></textarea>
+            </div>
+
+            <button type="submit">Edit Post</button>
+        </form>
+
+        <a href="/posts" class="btn-link">Back to Posts</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <link rel="stylesheet" href="/REST_api/public/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Post Details</h1>
+        <div class="post">
+            <p class="username">Post ID: <%= post.id %></p>
+            <p class="username">Username: <%= post.username %></p>
+            <p class="content">Content:</p>
+            <p><%= post.content %></p>
+        </div>
+
+        <a href="/posts" class="btn-link">Back to Posts</a>
+    </div>
+</body>
+</html>
